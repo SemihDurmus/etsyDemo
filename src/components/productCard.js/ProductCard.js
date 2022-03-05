@@ -1,11 +1,13 @@
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
+import { useHistory } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 
 const ProductCard = (props) => {
-  const { name, url } = props;
+  const history = useHistory();
+  const { name, url, id } = props;
   return (
-    <StyledCardWrapper>
+    <StyledCardWrapper onClick={() => history.push("/products/" + id)}>
       <img
         src={url}
         style={{ width: "100%", height: "70%", position: "relative" }}
@@ -31,6 +33,7 @@ const StyledCardWrapper = styled(Box)`
   transition: 0.2s;
   overflow: hidden;
   margin: 0.5rem;
+  cursor: pointer;
   &:hover {
     background-color: #efefef;
     box-shadow: 0.1rem 0.1em 0.6rem #778ca3;

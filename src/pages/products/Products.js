@@ -18,8 +18,9 @@ export const Products = () => {
           return (
             <ProductCard
               key={item.id}
+              id={item.id}
               name={item.name}
-              url={item["photo-url"]}
+              url={item.mainPhotoUrl}
             />
           );
         })}
