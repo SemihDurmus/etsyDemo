@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "0001",
+      "name": "Colorful bags",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga",
+      "group": "accessory",
+      "photo-url": "https://images.unsplash.com/photo-1534413340928-7bd74b65196f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "0002",
+      "name": "Mirrors",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis",
+      "group": "wall",
+      "photo-url": "https://images.unsplash.com/photo-1622076358551-aaf9a65a0878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhbmRjcmFmdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": "0003",
+      "name": "Elephants",
+      "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "group": "tabletop",
+      "photo-url": "https://images.unsplash.com/photo-1550583074-288b9c016df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+    },
+    {
+      "id": "0004",
+      "name": "Mirrors",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis",
+      "group": "wall",
+      "photo-url": "https://images.unsplash.com/photo-1622076358551-aaf9a65a0878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhbmRjcmFmdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": "0005",
+      "name": "Elephants",
+      "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "group": "tabletop",
+      "photo-url": "https://images.unsplash.com/photo-1550583074-288b9c016df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+    },
+    {
+      "id": "0006",
+      "name": "Mirrors",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis",
+      "group": "wall",
+      "photo-url": "https://images.unsplash.com/photo-1622076358551-aaf9a65a0878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhbmRjcmFmdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": "0007",
+      "name": "Elephants",
+      "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "group": "tabletop",
+      "photo-url": "https://images.unsplash.com/photo-1550583074-288b9c016df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+    },
+    {
+      "id": "0008",
+      "name": "Mirrors",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis",
+      "group": "wall",
+      "photo-url": "https://images.unsplash.com/photo-1622076358551-aaf9a65a0878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhbmRjcmFmdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": "0009",
+      "name": "Elephants",
+      "description": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "group": "tabletop",
+      "photo-url": "https://images.unsplash.com/photo-1550583074-288b9c016df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+    }
+  ]
+}
