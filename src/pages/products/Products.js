@@ -10,7 +10,15 @@ export const Products = () => {
   const { products } = data;
 
   return (
-    <Container maxWidth="md">
+    <Container
+      maxWidth="md"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        pb: "20vh",
+      }}
+    >
       <Header name="Products" />
       {(products === undefined || !products.length) && <div>No products</div>}
       <CardsWrapper>

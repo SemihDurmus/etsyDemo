@@ -1,16 +1,29 @@
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
+import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
-import { useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+import { useParams, useHistory } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import Header from "../../components/header/Header";
 import * as data from "../../assets/productList/ProductList.json";
+import ProductImagePopup from "../../components/productImagePopup/ProductImagePopup";
 
 const ProductDetails = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedUrl, setSelectedUrl] = useState("");
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleSelectImage = (el) => {
+    setOpen(true);
+    setSelectedUrl(el);
+  };
   const { id } = useParams();
+  const history = useHistory();
   const { products } = data;
 
   const item = products.filter((i) => i.id === id)[0];
@@ -22,6 +35,7 @@ const ProductDetails = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        pb: "20vh",
       }}
     >
       <Header name={item.name} />
@@ -31,13 +45,13 @@ const ProductDetails = () => {
             <Box
               sx={{
                 border: "1px solid transparent",
+                cursor: "pointer",
                 mb: 4,
-                borderRadius: "0.3rem",
                 "&:hover": {
-                  border: "1px solid red",
-                  backgroundColor: "white",
+                  border: "1px solid salmon",
                 },
               }}
+              onClick={() => handleSelectImage(el)}
             >
               <img
                 src={el}
@@ -56,6 +70,19 @@ const ProductDetails = () => {
       <StyledCard>
         <Description>{item.description}</Description>
       </StyledCard>
+      <Button
+        sx={{ m: 2 }}
+        variant="outlined"
+        startIcon={<ArrowBackIosIcon />}
+        onClick={() => history.push("/products")}
+      >
+        Back
+      </Button>
+      <ProductImagePopup
+        open={open}
+        handleClose={handleClose}
+        url={selectedUrl}
+      />
     </Container>
   );
 };
@@ -74,13 +101,7 @@ const StyledCard = styled(Box)`
   background-color: #efefef;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.2rem;
-  margin-bottom: 40vh;
   box-shadow: 0.1rem 0.1em 0.6rem #778ca3;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column; */
 `;
 
 const Description = styled(Typography)`
