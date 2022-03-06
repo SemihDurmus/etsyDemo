@@ -73,7 +73,7 @@ const ProductDetails = () => {
         sx={{ m: 2 }}
         variant="outlined"
         startIcon={<ArrowBackIosIcon />}
-        onClick={() => history.push("/products")}
+        onClick={() => history.push("/")}
       >
         Back
       </Button>
