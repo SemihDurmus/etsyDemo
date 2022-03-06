@@ -8,7 +8,7 @@ import { useParams, useHistory } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import Header from "../../components/header/Header";
-import * as data from "../../assets/productList/ProductList.json";
+import { productList } from "../../assets/productList/ProductList";
 import ProductImagePopup from "../../components/productImagePopup/ProductImagePopup";
 
 const ProductDetails = () => {
@@ -24,9 +24,8 @@ const ProductDetails = () => {
   };
   const { id } = useParams();
   const history = useHistory();
-  const { products } = data;
 
-  const item = products.filter((i) => i.id === id)[0];
+  const item = productList.filter((i) => i.id === id)[0];
 
   return (
     <Container

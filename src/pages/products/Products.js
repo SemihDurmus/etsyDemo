@@ -3,12 +3,10 @@ import { styled } from "@mui/system";
 import Container from "@mui/material/Container";
 
 import Header from "../../components/header/Header";
-import * as data from "../../assets/productList/ProductList.json";
+import { productList } from "../../assets/productList/ProductList";
 import ProductCard from "../../components/productCard.js/ProductCard";
 
 export const Products = () => {
-  const { products } = data;
-
   return (
     <Container
       maxWidth="md"
@@ -20,9 +18,9 @@ export const Products = () => {
       }}
     >
       <Header name="Products" />
-      {(products === undefined || !products.length) && <div>No products</div>}
+      {!productList.length && <div>No products</div>}
       <CardsWrapper>
-        {products.map((item) => {
+        {productList.map((item) => {
           return (
             <ProductCard
               key={item.id}
