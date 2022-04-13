@@ -8,6 +8,7 @@ import { useParams, useHistory } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import Header from "../../components/header/Header";
+import { Comment } from "../../components/comment/Comment";
 import { productList } from "../../assets/productList/ProductList";
 import ProductImagePopup from "../../components/productImagePopup/ProductImagePopup";
 
@@ -26,6 +27,7 @@ const ProductDetails = () => {
   const history = useHistory();
 
   const item = productList.filter((i) => i.id === id)[0];
+  const comments = item.comments;
 
   return (
     <Container
@@ -69,6 +71,20 @@ const ProductDetails = () => {
       <StyledCard>
         <Description>{item.description}</Description>
       </StyledCard>
+      {!!comments.length && <h3>User reviews</h3>}
+      {!!comments.length &&
+        comments.map((el, index) => {
+          return (
+            <Comment
+              key={index}
+              createdBy={el.createdBy}
+              createdAt={el.createdAt}
+              commentText={el.commentText}
+              repliedAt={el.repliedAt}
+              reply={el.reply}
+            />
+          );
+        })}
       <Button
         sx={{ m: 2 }}
         variant="outlined"
@@ -104,6 +120,7 @@ const StyledCard = styled(Box)`
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.2rem;
   box-shadow: 0.1rem 0.1em 0.6rem #778ca3;
+  margin-bottom: 1.5rem;
 `;
 
 const Description = styled(Typography)`
