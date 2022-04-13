@@ -77,11 +77,14 @@ const ProductDetails = () => {
       >
         Back
       </Button>
-      <ProductImagePopup
-        open={open}
-        handleClose={handleClose}
-        url={selectedUrl}
-      />
+      {item.photoUrls.length > 0 && (
+        <ProductImagePopup
+          open={open}
+          handleClose={handleClose}
+          urlsArray={item.photoUrls}
+          url={selectedUrl}
+        />
+      )}
     </Container>
   );
 };
