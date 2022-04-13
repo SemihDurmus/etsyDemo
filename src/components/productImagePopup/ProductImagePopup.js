@@ -7,7 +7,6 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
 const ProductImagePopup = ({ open, handleClose, urlsArray, url }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -40,22 +39,28 @@ const ProductImagePopup = ({ open, handleClose, urlsArray, url }) => {
         </IconButton>
       </DialogActions>
       <DialogContent>
-        <Box>
-          {selectedIndex > 0 && (
-            <IconButton aria-label="delete" onClick={handleLeft}>
-              <ChevronLeftIcon color="primary" />
-            </IconButton>
-          )}
+        <Box display={"flex"}>
+          <Box sx={sideBox}>
+            {selectedIndex > 0 && (
+              <IconButton aria-label="delete" onClick={handleLeft}>
+                <ChevronLeftIcon color="primary" />
+              </IconButton>
+            )}
+          </Box>
           <img src={urlsArray[selectedIndex]} alt="detail" />
-          {selectedIndex < urlsArray.length - 1 && (
-            <IconButton aria-label="delete" onClick={handleRight}>
-              <ChevronRightIcon color="primary" />
-            </IconButton>
-          )}
+          <Box sx={sideBox}>
+            {selectedIndex < urlsArray.length - 1 && (
+              <IconButton aria-label="delete" onClick={handleRight}>
+                <ChevronRightIcon color="primary" />
+              </IconButton>
+            )}
+          </Box>
         </Box>
       </DialogContent>
     </Dialog>
   );
 };
+
+const sideBox = { display: "flex", alignItems: "center", p: "0 8px" };
 
 export default ProductImagePopup;
