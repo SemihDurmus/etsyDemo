@@ -31,11 +31,11 @@ export const NavBar = () => {
   };
 
   const handleProducts = (event) => {
-    history.push("/products/");
+    history.push("/products");
     handleClose(event);
   };
   const handleBlog = (event) => {
-    history.push("/blog/");
+    history.push("/blog");
     handleClose(event);
   };
 
