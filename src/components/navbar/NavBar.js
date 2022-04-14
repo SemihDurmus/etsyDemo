@@ -31,7 +31,7 @@ export const NavBar = () => {
   };
 
   const handleProducts = (event) => {
-    history.push("/");
+    history.push("/products/");
     handleClose(event);
   };
   const handleBlog = (event) => {
