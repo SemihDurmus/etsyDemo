@@ -31,7 +31,7 @@ export const Blog = () => {
                 id={item.id}
                 type="blog"
                 name={item.title}
-                url={item.photoUrl}
+                url={item.mainPhotoUrl}
                 date={item.createdAt}
               />
             );

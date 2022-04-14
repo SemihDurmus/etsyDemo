@@ -2,17 +2,16 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
-import { useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
+import { useParams } from "react-router-dom";
 
 import Header from "../../components/header/Header";
+import { posts } from "../../assets/productList/BlogPosts";
 import { Comment } from "../../components/comment/Comment";
 import ItemPhoto from "../../components/itemPhoto/ItemPhoto";
-import BackButton from "../../components/backButton/BackButton";
 import ImagePopup from "../../components/imagePopup/ImagePopup";
-import { productList } from "../../assets/productList/ProductList";
-
-const ProductDetails = () => {
+import BackButton from "../../components/backButton/BackButton";
+export const BlogDetail = () => {
   const [open, setOpen] = useState(false);
   const [selectedUrl, setSelectedUrl] = useState("");
 
@@ -25,9 +24,9 @@ const ProductDetails = () => {
   };
   const { id } = useParams();
 
-  const item = productList.filter((i) => i.id === id)[0];
+  const item = posts.filter((i) => i.id === id)[0];
+  console.log(item);
   const comments = item.comments;
-
   return (
     <Container
       maxWidth="md"
@@ -38,7 +37,7 @@ const ProductDetails = () => {
         pb: "20vh",
       }}
     >
-      <Header name={item.name} />
+      <Header name={item.title} />
       <ImageWrapper>
         {item.photoUrls.length > 0 &&
           item.photoUrls.map((el, index) => (
@@ -47,7 +46,7 @@ const ProductDetails = () => {
       </ImageWrapper>
 
       <StyledCard>
-        <Description>{item.description}</Description>
+        <Description>{item.post}</Description>
       </StyledCard>
       {!!comments.length && <h3>User reviews</h3>}
       {!!comments.length &&
@@ -100,4 +99,4 @@ const Description = styled(Typography)`
   font-weight: 100;
 `;
 
-export default ProductDetails;
+export default BlogDetail;

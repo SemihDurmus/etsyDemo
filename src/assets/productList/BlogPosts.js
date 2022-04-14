@@ -12,8 +12,14 @@ export const posts = [
     
     Blandit turpis cursus in hac habitasse platea dictumst quisque. Feugiat sed lectus vestibulum mattis ullamcorper velit sed. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Tellus molestie nunc non blandit massa enim nec dui. Sollicitudin ac orci phasellus egestas tellus rutrum. Magnis dis parturient montes nascetur ridiculus mus. Lorem donec massa sapien faucibus et molestie. Tincidunt tortor aliquam nulla facilisi. Fermentum dui faucibus in ornare quam viverra. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Fermentum odio eu feugiat pretium nibh ipsum consequat. Nunc sed velit dignissim sodales ut eu sem integer vitae. Nec feugiat in fermentum posuere urna nec. Elementum tempus egestas sed sed risus pretium.`,
     createdAt: "2021-03-08",
-    photoUrl:
+    mainPhotoUrl:
       "https://media.istockphoto.com/photos/young-woman-making-vlog-about-making-shoes-picture-id1181288570?k=20&m=1181288570&s=612x612&w=0&h=jV18PXphHjbfN6pmm4xv2JXBOcWpTBFqi3yJCo5tBEk=",
+    photoUrls: [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "https://images.unsplash.com/photo-1560891958-68bb1fe7fb78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80",
+      "https://images.unsplash.com/photo-1613482184972-f9c1022d0928?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1588122698107-836d3c39704c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    ],
     comments: [
       {
         id: "b001-001",
@@ -51,8 +57,9 @@ export const posts = [
     Nistique senectus et netus et malesuada fames ac 
     Purpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam faucibus purus in`,
     createdAt: "2022-03-11",
-    photoUrl:
+    mainPhotoUrl:
       "https://media.istockphoto.com/photos/being-creative-is-so-easy-and-i-will-help-you-about-that-picture-id1285436746?k=20&m=1285436746&s=612x612&w=0&h=jtNrglk09JS40orLQyPEqJ-mkkxXDqq-7xn86RU9KkA=",
+    photoUrls: [],
     comments: [],
   },
 ];
