@@ -1,7 +1,7 @@
 {
   "name": "etsy-blog",
-  "homepage": "https://semihdurmus.github.io/etsyDemo/products/",
-  "version": "1.2.3",
+  "homepage": "https://semihdurmus.github.io/etsyDemo/products",
+  "version": "1.2.4",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.1",
