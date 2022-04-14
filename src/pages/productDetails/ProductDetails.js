@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
 
 import Header from "../../components/header/Header";
+import wallPaper from "../../assets/images/webb.png";
 import { Comment } from "../../components/comment/Comment";
 import ItemPhoto from "../../components/itemPhoto/ItemPhoto";
 import BackButton from "../../components/backButton/BackButton";
@@ -29,50 +30,52 @@ const ProductDetails = () => {
   const comments = item.comments;
 
   return (
-    <Container
-      maxWidth="md"
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        pb: "20vh",
-      }}
-    >
-      <Header name={item.name} />
-      <ImageWrapper>
-        {item.photoUrls.length > 0 &&
-          item.photoUrls.map((el, index) => (
-            <ItemPhoto key={index} el={el} handleSelect={handleSelectImage} />
-          ))}
-      </ImageWrapper>
+    <Box sx={{ minHeight: "100vh", backgroundImage: `url(${wallPaper})` }}>
+      <Container
+        maxWidth="md"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          pb: "20vh",
+        }}
+      >
+        <Header name={item.name} />
+        <ImageWrapper>
+          {item.photoUrls.length > 0 &&
+            item.photoUrls.map((el, index) => (
+              <ItemPhoto key={index} el={el} handleSelect={handleSelectImage} />
+            ))}
+        </ImageWrapper>
 
-      <StyledCard>
-        <Description>{item.description}</Description>
-      </StyledCard>
-      {!!comments.length && <h3>User reviews</h3>}
-      {!!comments.length &&
-        comments.map((el, index) => {
-          return (
-            <Comment
-              key={index}
-              createdBy={el.createdBy}
-              createdAt={el.createdAt}
-              commentText={el.commentText}
-              repliedAt={el.repliedAt}
-              reply={el.reply}
-            />
-          );
-        })}
-      <BackButton />
-      {!!item.photoUrls.length && (
-        <ImagePopup
-          open={open}
-          handleClose={handleClose}
-          urlsArray={item.photoUrls}
-          url={selectedUrl}
-        />
-      )}
-    </Container>
+        <StyledCard>
+          <Description>{item.description}</Description>
+        </StyledCard>
+        {!!comments.length && <h3>User reviews</h3>}
+        {!!comments.length &&
+          comments.map((el, index) => {
+            return (
+              <Comment
+                key={index}
+                createdBy={el.createdBy}
+                createdAt={el.createdAt}
+                commentText={el.commentText}
+                repliedAt={el.repliedAt}
+                reply={el.reply}
+              />
+            );
+          })}
+        <BackButton />
+        {!!item.photoUrls.length && (
+          <ImagePopup
+            open={open}
+            handleClose={handleClose}
+            urlsArray={item.photoUrls}
+            url={selectedUrl}
+          />
+        )}
+      </Container>
+    </Box>
   );
 };
 

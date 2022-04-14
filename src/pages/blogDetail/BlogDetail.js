@@ -2,15 +2,17 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
-import Container from "@mui/material/Container";
 import { useParams } from "react-router-dom";
+import Container from "@mui/material/Container";
 
 import Header from "../../components/header/Header";
-import { posts } from "../../assets/productList/BlogPosts";
+import wallPaper from "../../assets/images/webb.png";
+import { posts } from "../../assets/blogPosts/BlogPosts";
 import { Comment } from "../../components/comment/Comment";
 import ItemPhoto from "../../components/itemPhoto/ItemPhoto";
 import ImagePopup from "../../components/imagePopup/ImagePopup";
 import BackButton from "../../components/backButton/BackButton";
+
 export const BlogDetail = () => {
   const [open, setOpen] = useState(false);
   const [selectedUrl, setSelectedUrl] = useState("");
@@ -28,50 +30,52 @@ export const BlogDetail = () => {
   console.log(item);
   const comments = item.comments;
   return (
-    <Container
-      maxWidth="md"
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        pb: "20vh",
-      }}
-    >
-      <Header name={item.title} />
-      <ImageWrapper>
-        {item.photoUrls.length > 0 &&
-          item.photoUrls.map((el, index) => (
-            <ItemPhoto key={index} el={el} handleSelect={handleSelectImage} />
-          ))}
-      </ImageWrapper>
+    <Box sx={{ minHeight: "100vh", backgroundImage: `url(${wallPaper})` }}>
+      <Container
+        maxWidth="md"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          pb: "20vh",
+        }}
+      >
+        <Header name={item.title} />
+        <ImageWrapper>
+          {item.photoUrls.length > 0 &&
+            item.photoUrls.map((el, index) => (
+              <ItemPhoto key={index} el={el} handleSelect={handleSelectImage} />
+            ))}
+        </ImageWrapper>
 
-      <StyledCard>
-        <Description>{item.post}</Description>
-      </StyledCard>
-      {!!comments.length && <h3>User reviews</h3>}
-      {!!comments.length &&
-        comments.map((el, index) => {
-          return (
-            <Comment
-              key={index}
-              createdBy={el.createdBy}
-              createdAt={el.createdAt}
-              commentText={el.commentText}
-              repliedAt={el.repliedAt}
-              reply={el.reply}
-            />
-          );
-        })}
-      <BackButton />
-      {!!item.photoUrls.length && (
-        <ImagePopup
-          open={open}
-          handleClose={handleClose}
-          urlsArray={item.photoUrls}
-          url={selectedUrl}
-        />
-      )}
-    </Container>
+        <StyledCard>
+          <Description>{item.post}</Description>
+        </StyledCard>
+        {!!comments.length && <h3>User comments</h3>}
+        {!!comments.length &&
+          comments.map((el, index) => {
+            return (
+              <Comment
+                key={index}
+                createdBy={el.createdBy}
+                createdAt={el.createdAt}
+                commentText={el.commentText}
+                repliedAt={el.repliedAt}
+                reply={el.reply}
+              />
+            );
+          })}
+        <BackButton />
+        {!!item.photoUrls.length && (
+          <ImagePopup
+            open={open}
+            handleClose={handleClose}
+            urlsArray={item.photoUrls}
+            url={selectedUrl}
+          />
+        )}
+      </Container>
+    </Box>
   );
 };
 
