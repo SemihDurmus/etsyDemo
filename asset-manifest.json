@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/etsyDemo/products/static/css/main.e6c13ad2.css",
-    "main.js": "/etsyDemo/products/static/js/main.dd0bb56e.js",
-    "static/js/787.56027575.chunk.js": "/etsyDemo/products/static/js/787.56027575.chunk.js",
-    "static/media/webb.png": "/etsyDemo/products/static/media/webb.50505726f01b54627e2f.png",
-    "index.html": "/etsyDemo/products/index.html",
-    "main.e6c13ad2.css.map": "/etsyDemo/products/static/css/main.e6c13ad2.css.map",
-    "main.dd0bb56e.js.map": "/etsyDemo/products/static/js/main.dd0bb56e.js.map",
-    "787.56027575.chunk.js.map": "/etsyDemo/products/static/js/787.56027575.chunk.js.map"
+    "main.css": "/etsyDemo/static/css/main.e6c13ad2.css",
+    "main.js": "/etsyDemo/static/js/main.f5914621.js",
+    "static/js/787.56027575.chunk.js": "/etsyDemo/static/js/787.56027575.chunk.js",
+    "static/media/webb.png": "/etsyDemo/static/media/webb.50505726f01b54627e2f.png",
+    "index.html": "/etsyDemo/index.html",
+    "main.e6c13ad2.css.map": "/etsyDemo/static/css/main.e6c13ad2.css.map",
+    "main.f5914621.js.map": "/etsyDemo/static/js/main.f5914621.js.map",
+    "787.56027575.chunk.js.map": "/etsyDemo/static/js/787.56027575.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.dd0bb56e.js"
+    "static/js/main.f5914621.js"
   ]
 }
