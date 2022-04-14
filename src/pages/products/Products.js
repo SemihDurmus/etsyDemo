@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 
 import Header from "../../components/header/Header";
 import { productList } from "../../assets/productList/ProductList";
-import ProductCard from "../../components/productCard.js/ProductCard";
+import ProductAndBlogCard from "../../components/productAndBlogCard.js/ProductAndBlogCard";
 
 export const Products = () => {
   return (
@@ -22,9 +22,10 @@ export const Products = () => {
       <CardsWrapper>
         {productList.map((item) => {
           return (
-            <ProductCard
+            <ProductAndBlogCard
               key={item.id}
               id={item.id}
+              type="product"
               name={item.name}
               url={item.mainPhotoUrl}
             />
