@@ -11,7 +11,7 @@ const ProductImagePopup = ({ open, handleClose, urlsArray, url }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
-    const findIndex = urlsArray.findIndex((el) => el == url);
+    const findIndex = urlsArray.findIndex((el) => el === url);
     setSelectedIndex(findIndex);
   }, [url]);
 
